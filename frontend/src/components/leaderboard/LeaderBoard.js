@@ -3,9 +3,15 @@ import PlayerCard from "../player/PlayerCard";
 
 const LeaderBoard = (props) => {
   return (
-    <div class="leaderboard">
+    <div className="leaderboard">
       {props.players.map((player) => {
-        return <PlayerCard name={player.name} rating={player.rating} />;
+        return (
+          <PlayerCard
+            key={player.id}
+            name={player.name}
+            rating={player.rating}
+          />
+        );
       })}
     </div>
   );
