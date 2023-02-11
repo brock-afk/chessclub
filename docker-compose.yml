@@ -8,3 +8,9 @@ services:
     volumes:
       - ./frontend/src:/app/src
       - ./frontend/public:/app/public
+  backend:
+    build: backend
+    ports:
+      - 5000:5000
+    volumes:
+      - ./backend/src:/app/src
